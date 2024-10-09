@@ -1,0 +1,209 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Poppins, sans-serif;
+}
+
+body {
+    line-height: 1;
+    font-family: 'Roboto', sans-serif;
+    background: radial-gradient(circle, #ffffff, #ffffff, #44444494);
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote::before, blockquote::after,
+q::before, q::after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Asegurar que los elementos de formulario hereden el font-family */
+input, button, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+/*---------------------------------------------------------------------------*/
+/*Navbar*/
+.navbar{
+    background: linear-gradient(to bottom, #19323e, #3E6578);
+    margin-bottom: 0.5%;
+}
+.navbar-brand {
+    color: #fff9ed;
+    font-size: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    background-color: black;
+    border-radius: 20px;
+    padding-top: 0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 0px;
+    background-image: linear-gradient(to left, black, #033b8f);
+}
+.navbar-brand:hover{
+    transform: scale(1.05); /* Escala la tarjeta al 105% */
+    transition: transform 0.3s ease-in-out; /* Transición más suave al entrar */
+}
+
+.nav-link {
+    color: white !important; 
+    font-size: 1rem; 
+    transition: color 0.3s; 
+}
+
+.nav-link:hover {
+    color: rgb(255, 255, 255) !important;
+    background-color: #1b275e;
+}
+/*---------------------------------------------------------------------------*/
+/* Crear el warning para cuando el formulario no se llene correctamente */
+.warnings {
+    width: 290px;
+    text-align: center;
+    margin: auto;
+    color: #ee2b25;
+    padding-top: 5px;
+    font-weight: bold;
+}
+
+
+/*Main*/
+
+section {
+    margin-bottom: 5%;
+}
+
+hr {
+    border: 5px solid #1C3846; 
+    border-radius: 300px/10px;
+    height: 0; 
+    margin: 20px 0;
+    opacity: 1; 
+}
+
+.cont-carousel {
+    max-width: 100%;
+    overflow: hidden;
+}
+.carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 90vh; /* Esto ajusta la altura al 100% del viewport */
+}
+
+.galeria-artistas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.galeria-artistas h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 2rem;
+}
+
+.card-artistas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
+    gap: 20px; /* Espacio entre las tarjetas */
+    justify-items: center; /* Centra las tarjetas dentro de cada columna */
+    width: 80%;
+}
+
+.card {
+    width: 18rem;
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    transition: transform 0.3s ease-in-out; /* Efecto de transición */
+    cursor: pointer; /* Cambia el cursor a puntero */
+}
+
+.card img {
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.card-body {
+    background-color: #333;
+    border-radius: 0 0 10px 10px;
+    padding: 15px;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Escala la tarjeta al 105% */
+    transition: transform 0.3s ease-in-out; /* Transición más suave al entrar */
+}
+
+/*---------------------------------------------------------------------------*/
+/*Footer*/
+
+.last {
+    background-color: #1C3846;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.last a {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    margin: 30px;
+}
+.last a:hover {
+    text-decoration: underline;
+}
+
+
+/*----------------------------------------------------------------------*/
+/*Media Querys*/
+
+@media (max-width: 992px) {
+    .card-artistas {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual ancho */
+    }
+}
+
+@media (max-width: 768px) {
+    .galeria-artistas h3 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .card-artistas {
+        grid-template-columns: 1fr; /* Una columna */
+    }
+}
