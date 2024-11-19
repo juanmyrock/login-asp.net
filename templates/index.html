@@ -72,7 +72,7 @@
             <button class="btn btn-primary" id="iniciar-sesion" type="submit">Iniciar Sesión</button>
           </div>
           <div class="col-md-6 mb-4">
-            <button class="btn btn-success" id="registrate" type="button">Registrate</button>
+            <button class="btn btn-success" id="pass-olvidada" type="button">Forgot Password?</button>
           </div>
         </form>
         
@@ -87,6 +87,13 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="/static/login.js"></script>
+  <script>
+    document.getElementById('iniciar-sesion').addEventListener('click', function() {
+        window.location.href = 'home.html';})
+    document.getElementById('pass-olvidada').addEventListener('click', function() {
+        window.location.href = 'registrarse.html';});
+  </script>
+
 </body>
 
 </html>
